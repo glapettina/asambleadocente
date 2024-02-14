@@ -13,11 +13,7 @@
                     <div class="mb-3">
                         <label for="area_nom" class="form-label">Nombre (*)</label>
                         <input class="form-control" type="text" id="area_nom" name="area_nom" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="area_correo" class="form-label">Correo Electrónico (*)</label>
-                        <input class="form-control" type="email" id="area_correo" name="area_correo" required>
-                    </div>
+                    </div>            
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Cerrar</button>

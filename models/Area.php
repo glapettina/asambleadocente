@@ -28,7 +28,7 @@
 
         }
 
-        public function insert_area($area_nom, $area_correo){
+        public function insert_area($area_nom){
 
             /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
 
@@ -40,14 +40,13 @@
 
            /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
 
-            $sql="INSERT INTO tm_area (area_nom, area_correo) VALUES (?, ?)";
+            $sql="INSERT INTO tm_area (area_nom) VALUES (?)";
 
             /* TODO: Prepara la consulta SQL */
 
             $sql = $conectar->prepare($sql);
 
             $sql->bindValue(1, $area_nom);
-            $sql->bindValue(2, $area_correo);
 
             /* TODO: Ejecutar la consulta SQL */
 
@@ -56,7 +55,7 @@
 
         }
 
-        public function update_area($area_id, $area_nom, $area_correo){
+        public function update_area($area_id, $area_nom){
 
             /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
 
@@ -68,15 +67,14 @@
 
            /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
 
-            $sql="UPDATE tm_area SET area_nom = ?, area_correo = ?, fech_modi = NOW() WHERE area_id = ?";
+            $sql="UPDATE tm_area SET area_nom = ?, fech_modi = NOW() WHERE area_id = ?";
 
             /* TODO: Prepara la consulta SQL */
 
             $sql = $conectar->prepare($sql);
 
             $sql->bindValue(1, $area_nom);
-            $sql->bindValue(2, $area_correo);
-            $sql->bindValue(3, $area_id);
+            $sql->bindValue(2, $area_id);
 
             /* TODO: Ejecutar la consulta SQL */
 

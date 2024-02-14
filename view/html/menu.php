@@ -31,9 +31,47 @@
             
             ?>
 
+            <ul class="metismenu list-unstyled mm-show" id="side-menu">
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        <span data-key="t-apps">Vacantes</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Cargos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Comunicación y Expresión</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Ciencias Sociales</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Jurídicas y Contables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Técnicas y Modalidades</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="apps-calendar.html">
+                                <span data-key="t-calendar">Exactas y Naturales</span>
+                            </a>
+                        </li>
+                </li>
+            </ul>
 
         </ul>
-
 
     </div>
 </div>

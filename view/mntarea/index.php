@@ -80,7 +80,6 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Nombre</th>
-                                                        <th>Correo</th>
                                                         <th>Fecha Creación</th>
                                                         <th></th>
                                                         <th></th>
