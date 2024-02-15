@@ -39,7 +39,7 @@
                     </a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false">
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../mntcargos/">
                                 <span data-key="t-calendar">Cargos</span>
                             </a>
                         </li>

@@ -14,7 +14,7 @@
 
            /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
 
-            $sql="SELECT * FROM tm_escuela WHERE est = 1";
+            $sql="SELECT * FROM tm_escuela WHERE est = 1 ORDER BY esc_nom";
 
             /* TODO: Prepara la consulta SQL */
 
