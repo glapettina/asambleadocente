@@ -16,7 +16,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Acceso | La Usina - Mesa de Partes</title>
+        <title>Acceso | La Usina - Asamblea Docente</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
@@ -30,6 +30,9 @@
         <link href="assets/css/icons.min-1.css" rel="stylesheet" type="text/css">
         <!-- App Css-->
         <link href="assets/css/app.min-1.css" id="app-style" rel="stylesheet" type="text/css">
+
+       
+
 
     </head>
 
@@ -50,7 +53,7 @@
                                     </div>
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
-                                            <h5 class="mb-0">Mesa de Partes</h5>
+                                            <h5 class="mb-0">Asamblea Docente 2024</h5>
                                             <p class="text-muted mt-2">Ingrese sus Credenciales.</p>
                                         </div>
                                         <form class="custom-form mt-4 pt-2" action="" method="post">
@@ -160,7 +163,7 @@
 
                                         <div class="mt-5 text-center">
                                             <p class="text-muted mb-0">No tienes Cuenta? <a href="view/registro/" class="text-primary fw-semibold"> Regístrate </a> </p>
-                                            <p class="text-muted mb-0">Eres Colaborador? <a href="view/accesopersonal/" class="text-primary fw-semibold"> Acceder </a> </p>
+                                            <p class="text-muted mb-0">Eres Administrador? <a href="view/accesopersonal/" class="text-primary fw-semibold"> Acceder </a> </p>
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">

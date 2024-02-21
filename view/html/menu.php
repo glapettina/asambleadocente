@@ -35,11 +35,11 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                        <span data-key="t-apps">Vacantes</span>
+                        <span data-key="t-apps">Vacantes Asamblea</span>
                     </a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false">
                         <li>
-                            <a href="../mntcargos/">
+                            <a href="../cargos/">
                                 <span data-key="t-calendar">Cargos</span>
                             </a>
                         </li>
@@ -70,6 +70,13 @@
                         </li>
                 </li>
             </ul>
+
+            <li>
+                <a href="../favoritos/">
+                    <i data-feather="star"></i>
+                    <span data-key="t-dashboard">Favoritos</span>
+                </a>
+            </li>
 
         </ul>
 

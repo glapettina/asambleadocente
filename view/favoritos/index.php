@@ -2,9 +2,9 @@
 
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");
-    $rol = new Rol();
-    $datos = $rol->validar_menu_x_rol($_SESSION["rol_id"], "mntarea");
-    if (isset($_SESSION["usu_id"]) AND count($datos) > 0) {
+    //$rol = new Rol();
+    //$datos = $rol->validar_menu_x_rol($_SESSION["rol_id"], "mnttramite");
+    //if (isset($_SESSION["usu_id"]) AND count($datos) > 0) {
         
 
    
@@ -16,8 +16,11 @@
 
     <head>
         
+     <!-- Estilos Propios-->
+
+     <link rel="stylesheet" href="../../assets/css/style.css">
         
-        <title>La Usina Software | Mantenimiento Áreas</title>
+        <title>La Usina Software | Favoritos</title>
         
         <?php require_once("../html/head.php") ?>
 
@@ -49,12 +52,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0 font-size-18">Mantenimiento de Área</h4>
+                                    <h4 class="mb-sm-0 font-size-18">Favoritos</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
-                                            <li class="breadcrumb-item active">Mantenimiento de Área</li>
+                                            <li class="breadcrumb-item active">Favoritos</li>
                                         </ol>
                                     </div>
 
@@ -65,24 +68,25 @@
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-header">
-                                            <h4 class="card-title">Listado de Áreas</h4>
-                                            <p class="card-title-desc">(*) Datos obligatorios </p>
+                                            <h4 class="card-title">Listado de Favoritos</h4>
                                         </div>
 
-                                        <div class="card-body">
-
-                                        <button type="button" id="btnnuevo" class="btn btn-primary waves-effect waves-light">Nuevo Registro</button>
-
-                                        <br>
-                                        <br>
+                                        <div class="card-body">                                       
                                         
                                             <table id="listado_table" class="table table-bordered dt-responsive  nowrap w-100">
                                                 <thead>
                                                     <tr>
-                                                        <th>Nombre</th>
-                                                        <th>Fecha Creación</th>
+                                                        <th>Escuela</th>
+                                                        <th>Localidad</th>
+                                                        <th style="width:1%">Código</th>
+                                                        <th>Cargo</th>
+                                                        <th style="width:1%">ID</th>
+                                                        <th>Horas</th>
+                                                        <th style="width:1%">Turno</th>
+                                                        <th>Origen</th>
+                                                        <th>Docente</th>
                                                         <th></th>
-                                                        <th></th>
+                                                        
                                                     </tr>
                                                 </thead>
             
@@ -111,7 +115,9 @@
         </div>
         <!-- END layout-wrapper -->
 
-        <?php require_once("mnt.php") ?>
+        
+        
+        
         
         <?php require_once("../html/sidebar.php") ?>
 
@@ -120,18 +126,10 @@
 
         <?php require_once("../html/js.php") ?>
 
-        <script type="text/javascript" src="mntarea.js"></script>
+        <script type="text/javascript" src="favoritos.js"></script>
 
         
 
     </body>
 </html>
 
-<?php
-
-    }else{
-
-        header("Location:".Conectar::ruta()."index.php");
-    }
-
-?>

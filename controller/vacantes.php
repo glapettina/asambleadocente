@@ -57,7 +57,8 @@ require_once("../models/Vacantes.php");
 
         case 'guardaryeditar':
 
-            $datos = $vacante->get_vacante_id($_POST["id"]);
+            $datos = $vacante->get_vacante_id($_POST["esc_id"], $_POST["id"]);
+
 
             if (is_array($datos) == true and count($datos) == 0) {
                 if (empty($_POST["vacante_id"])) {

@@ -16,6 +16,9 @@
 
     <head>
         
+     <!-- Estilos Propios-->
+
+     <link rel="stylesheet" href="../../assets/css/style.css">
         
         <title>La Usina Software | Cargos</title>
         
@@ -53,7 +56,7 @@
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                                             <li class="breadcrumb-item active">Cargos</li>
                                         </ol>
                                     </div>
@@ -66,30 +69,25 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <h4 class="card-title">Listado de Cargos</h4>
-                                            <p class="card-title-desc">(*) Datos obligatorios </p>
                                         </div>
 
-                                        <div class="card-body">
-
-                                        <button type="button" id="btnnuevo" class="btn btn-primary waves-effect waves-light">Nuevo Registro</button>
-
-                                        <br>
-                                        <br>
+                                        <div class="card-body">                                       
                                         
                                             <table id="listado_table" class="table table-bordered dt-responsive  nowrap w-100">
                                                 <thead>
                                                     <tr>
-                                                        <th>Escuela</th>
-                                                        <th>Localidad</th>
-                                                        <th>Código</th>
-                                                        <th>Cargo</th>
-                                                        <th>ID</th>
+                                                        <th style="width:0.5%">Escuela</th>
+                                                        <th style="width:1%">Localidad</th>
+                                                        <th style="width:0.5%">Código</th>
+                                                        <th>Asignatura/Cargo</th>
+                                                        <th style="width:1%">ID</th>
                                                         <th>Horas</th>
-                                                        <th>Turno</th>
+                                                        <th style="width:1%">Turno</th>
                                                         <th>Origen</th>
                                                         <th>Docente</th>
                                                         <th></th>
-                                                        <th></th>
+
+                                                        
                                                     </tr>
                                                 </thead>
             
@@ -118,7 +116,21 @@
         </div>
         <!-- END layout-wrapper -->
 
-        <?php require_once("mnt.php") ?>
+        <?php
+        
+            if ($_SESSION["rol_id"] == 3) {
+                
+                require_once("mnt.php");
+            }else {
+
+                require_once("mntfav.php");
+            }
+
+        ?>
+
+        
+        
+        
         
         <?php require_once("../html/sidebar.php") ?>
 
@@ -127,7 +139,7 @@
 
         <?php require_once("../html/js.php") ?>
 
-        <script type="text/javascript" src="mntcargos.js"></script>
+        <script type="text/javascript" src="cargos.js"></script>
 
         
 

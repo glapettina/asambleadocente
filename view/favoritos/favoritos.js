@@ -6,6 +6,11 @@ function init(){
 
         guardaryeditar(e);
     });
+
+    $("#mnt_form_favorito").on("submit", function(e){
+
+        marcar(e);
+    });
 }
 
 function guardaryeditar(e){
@@ -16,7 +21,7 @@ function guardaryeditar(e){
 
 
     $.ajax({
-        url: "../../controller/cargos.php?op=guardaryeditar",
+        url: "../../controller/cargos.php?op=editar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -25,7 +30,7 @@ function guardaryeditar(e){
 
         console.log(datos);
 
-        if (datos == 1) {
+        if (datos == 2) {
             
             $("#vacante_id").val('');
             $("#mnt_form")[0].reset();
@@ -49,7 +54,7 @@ function guardaryeditar(e){
                 icon: "error", 
                 confirmButtonColor: "#5156be" 
               });
-        }else if(datos == 2){
+        }/* else if(datos == 2){
             $("#vacante_id").val('');
             $("#mnt_form")[0].reset();
 
@@ -63,7 +68,7 @@ function guardaryeditar(e){
             icon: "success", 
             confirmButtonColor: "#5156be" 
           });
-        } 
+        }  */
 
         
 
@@ -73,11 +78,64 @@ function guardaryeditar(e){
 
 }
 
+function marcar(e){
+
+    e.preventDefault();
+
+    var formData = new FormData($("#mnt_form_favorito")[0]);
+
+
+    $.ajax({
+        url: "../../controller/cargos.php?op=marcar",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(datos){
+
+        console.log(datos);
+
+        if (datos == 1) {
+            
+            $("#vacante_id").val('');
+            $("#mnt_form_favorito")[0].reset();
+
+            $("#listado_table").DataTable().ajax.reload();
+
+            $("#mnt_modal_favorito").modal('hide');
+
+           Swal.fire({ 
+            title: "Asamblea Docente", 
+            html: "Se agregó a favoritos.", 
+            icon: "success", 
+            confirmButtonColor: "#5156be" 
+          });
+
+        } else if (datos == 2) {
+            
+            Swal.fire({ 
+                title: "Asamblea Docente", 
+                html: "Registro ya marcado como favorito.", 
+                icon: "error", 
+                confirmButtonColor: "#5156be" 
+              });
+        } 
+    }  
+        
+    });
+
+}
+
 $(document).ready(function(){
 
     $.post("../../controller/escuela.php?op=combo", function(data){
         
         $('#esc_id').html(data);
+    });
+
+    $.post("../../controller/area.php?op=combo", function(data){
+        
+        $('#area_id').html(data);
     });
 
     tabla = $('#listado_table').dataTable({
@@ -94,7 +152,7 @@ $(document).ready(function(){
             'pdfHtml5'
         ],
         "ajax":{
-            url: '../../controller/cargos.php?op=listar',
+            url: '../../controller/favoritos.php?op=listar',
             type: "get",
             dataType: "json",
             error:function(e){
@@ -141,23 +199,22 @@ $(document).on("click", "#btnnuevo", function(){
     $("#mnt_modal").modal('show');
 });
 
-function editar(tra_id){
+function editar(vacante_id){
 
     $("#myModalLabel").html('Editar Registro');
-    $.post("../../controller/tramite.php?op=mostrar", {tra_id : tra_id}, function(data){
+    $.post("../../controller/cargos.php?op=mostrar_docente", {vacante_id : vacante_id}, function(data){
 
         data = JSON.parse(data);
-        $("#tra_id").val(data.tra_id);
-        $("#tra_nom").val(data.tra_nom);
-        $("#tra_descrip").val(data.tra_descrip);
+        $("#vacante_id").val(data.vacante_id);
+        $("#docente").val(data.docente);
         $("#mnt_modal").modal('show');
     });   
 }
 
-function eliminar(tra_id){
+function eliminar(vacante_id){
 
     Swal.fire({
-        title: "Está seguro de eliminar el registro?",
+        title: "Está seguro de eliminar la vacante de favoritos?",
         icon: "question",
         showDenyButton: true,
         confirmButtonText: "Si",
@@ -165,10 +222,10 @@ function eliminar(tra_id){
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-            $.post("../../controller/tramite.php?op=eliminar", {tra_id : tra_id}, function(data){
+            $.post("../../controller/favoritos.php?op=eliminar", {vacante_id : vacante_id}, function(data){
                 $("#listado_table").DataTable().ajax.reload();
                 Swal.fire({ 
-                    title: "Mesa de Partes", 
+                    title: "Asamblea Docente", 
                     html: "Se eliminó con éxito.", 
                     icon: "success", 
                     confirmButtonColor: "#5156be" 
@@ -178,5 +235,25 @@ function eliminar(tra_id){
         } 
       });
 }
+
+function favorito(vacante_id){
+
+    $("#myModalLabel").html('Marcar Favorito');
+    $.post("../../controller/cargos.php?op=mostrar", {vacante_id : vacante_id}, function(data){
+
+        data = JSON.parse(data);
+        $("#vacante_id").val(data.vacante_id);
+        $("#area_id").val(data.area_id);
+        $("#esc_id").val(data.esc_id);
+        $("#codigo").val(data.codigo);
+        $("#asignatura").val(data.asignatura);
+        $("#id").val(data.id);
+        $("#horas").val(data.horas);
+        $("#turno").val(data.turno);
+        $("#origen").val(data.origen);
+        $("#mnt_modal_favorito").modal('show');
+    });   
+}
+
 
 init();

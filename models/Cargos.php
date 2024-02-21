@@ -80,7 +80,7 @@
 
         }
 
-        public function update_tramite($tra_id, $tra_nom, $tra_descrip){
+        public function update_cargo($vacante_id, $docente){
 
             /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
 
@@ -92,15 +92,14 @@
 
            /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
 
-            $sql="UPDATE tm_tramite SET tra_nom = ?, tra_descrip = ?, fech_modi = NOW() WHERE tra_id = ?";
+            $sql="UPDATE tm_vacante SET docente = ?, fech_modi = NOW() WHERE vacante_id = ?";
 
             /* TODO: Prepara la consulta SQL */
 
             $sql = $conectar->prepare($sql);
 
-            $sql->bindValue(1, $tra_nom);
-            $sql->bindValue(2, $tra_descrip);
-            $sql->bindValue(3, $tra_id);
+            $sql->bindValue(1, $docente);
+            $sql->bindValue(2, $vacante_id);
 
             /* TODO: Ejecutar la consulta SQL */
 
@@ -194,6 +193,64 @@
     $sql->execute();
 
     }
+
+    public function insert_favorito($usu_id, $vacante_id){
+
+        /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
+
+        $conectar = parent::conexion();
+
+        /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+        parent::set_names();
+
+       /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+        $sql="INSERT INTO td_vacante_docente (usu_id, vacante_id) VALUES (?, ?)";
+
+        /* TODO: Prepara la consulta SQL */
+
+        $sql = $conectar->prepare($sql);
+
+        $sql->bindValue(1, $usu_id);
+        $sql->bindValue(2, $vacante_id);
+
+        /* TODO: Ejecutar la consulta SQL */
+
+        $sql->execute();
+
+
+    }
+
+    public function get_vacante_x_docente($usu_id, $vacante_id){
+
+        /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+        $conectar = parent::conexion();
+
+        /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+        parent::set_names();
+
+    /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+        $sql="SELECT * FROM td_vacante_docente WHERE usu_id = ? AND vacante_id =?";
+
+        /* TODO: Prepara la consulta SQL */
+
+        $sql = $conectar->prepare($sql);
+
+        /* TODO: Vincular los valores a los parámetros de la consulta */
+
+        $sql->bindValue(1, $usu_id);
+        $sql->bindValue(2, $vacante_id);
+
+        /* TODO: Ejecutar la consulta SQL */
+
+        $sql->execute();
+
+        return $sql->fetchAll();
+}
 
     }
 

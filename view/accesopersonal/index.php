@@ -16,7 +16,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Colaborador | La Usina - Mesa de Partes</title>
+        <title>Administrador | La Usina - Asamblea Docente</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
-                                            <h5 class="mb-0">Mesa de Partes (Colaborador)</h5>
+                                            <h5 class="mb-0">Asamblea Docente 2024 (Administrador)</h5>
                                             <p class="text-muted mt-2">Ingrese sus Credenciales de Colaborador.</p>
                                         </div>
                                         <form class="custom-form mt-4 pt-2" action="" method="post">
