@@ -3,7 +3,7 @@
     require_once("../../config/conexion.php");
     require_once("../../models/Rol.php");
     $rol = new Rol();
-    $datos = $rol->validar_menu_x_rol($_SESSION["rol_id"], "mnttramite");
+    $datos = $rol->validar_menu_x_rol($_SESSION["rol_id"], "mntvacantes");
     if (isset($_SESSION["usu_id"]) AND count($datos) > 0) {
         
 

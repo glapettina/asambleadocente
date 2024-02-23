@@ -39,12 +39,12 @@
 
             $this->Username = $this->gCorreo;
             $this->Password = $this->gContrasena;
-            $this->setFrom($this->gCorreo, "Registro en Mesa de Partes GL Software");
+            $this->setFrom($this->gCorreo, "Registro en Asamblea Docente");
 
             $this->CharSet = 'UTF8';
             $this->addAddress($datos[0]["usu_correo"]);
             $this->IsHTML(true);
-            $this->Subject = "Mesa de Partes";
+            $this->Subject = "Asamblea Docente";
 
             $url = $conexion->ruta() . "view/confirmar/?id=" . $textoCifrado;
 
@@ -82,12 +82,12 @@
 
             $this->Username = $this->gCorreo;
             $this->Password = $this->gContrasena;
-            $this->setFrom($this->gCorreo, "Recuperar Contraseña Mesa de Partes La Usina");
+            $this->setFrom($this->gCorreo, "Recuperar Contraseña Asamblea Docente");
 
             $this->CharSet = 'UTF8';
             $this->addAddress($datos[0]["usu_correo"]);
             $this->IsHTML(true);
-            $this->Subject = "Mesa de Partes";
+            $this->Subject = "Asamblea Docente";
 
             if ($rol_id == 1) {
 
@@ -137,12 +137,12 @@
 
             $this->Username = $this->gCorreo;
             $this->Password = $this->gContrasena;
-            $this->setFrom($this->gCorreo, "Bienvenido Colaborador Mesa de Partes GL Software");
+            $this->setFrom($this->gCorreo, "Bienvenido Colaborador Asamblea Docente");
 
             $this->CharSet = 'UTF8';
             $this->addAddress($datos[0]["usu_correo"]);
             $this->IsHTML(true);
-            $this->Subject = "Mesa de Partes";
+            $this->Subject = "Asamblea Docente";
 
             
                 

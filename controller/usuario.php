@@ -74,26 +74,25 @@
 
                     if (is_array($datos) == true && count($datos) == 0) {
 
-                        $datos1 = $usuario->registrar_usuario($nombre, $email, "", $imagen, 1);
+                        $datos1 = $usuario->registrar_usuario($nombre,$email,"",$imagen,1);
+
+                        //print_r($datos1);
 
                         $_SESSION["usu_id"] = $datos1[0]["usu_id"];
                         $_SESSION["usu_nomape"] = $nombre;
                         $_SESSION["usu_correo"] = $email;
-                        $_SESSION["usu_img"] = $imagen;
-                        $_SESSION["rol_id"] = $datos1[0]["rol_id"];
+                        $_SESSION["usu_img"] =  $imagen;
+                        $_SESSION["rol_id"] =  $datos1[0]["rol_id"];
 
                         echo "1";
-
                     }else{
-
                         $usu_id = $datos[0]["usu_id"];
 
                         $_SESSION["usu_id"] = $usu_id;
                         $_SESSION["usu_nomape"] = $nombre;
                         $_SESSION["usu_correo"] = $email;
-                        $_SESSION["usu_img"] = $imagen;
-                        $_SESSION["rol_id"] = $datos[0]["rol_id"];
-
+                        $_SESSION["usu_img"] =  $imagen;
+                        $_SESSION["rol_id"] =  $datos[0]["rol_id"];
 
                         echo "0";
                         

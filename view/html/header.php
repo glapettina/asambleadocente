@@ -70,8 +70,8 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="apps-contacts-profile.html"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Perfil</a>
-                    <div class="dropdown-divider"></div>
+                    <!-- <a class="dropdown-item" href="apps-contacts-profile.html"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Perfil</a>
+                    <div class="dropdown-divider"></div> -->
                     <a class="dropdown-item" href="../html/logout.php"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Cerrar Sesión</a>
                 </div>
             </div>

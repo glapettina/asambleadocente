@@ -44,39 +44,46 @@
                             </a>
                         </li>
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../comunicacion/">
                                 <span data-key="t-calendar">Comunicación y Expresión</span>
                             </a>
                         </li>
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../sociales/">
                                 <span data-key="t-calendar">Ciencias Sociales</span>
                             </a>
                         </li>
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../contables/">
                                 <span data-key="t-calendar">Jurídicas y Contables</span>
                             </a>
                         </li>
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../tecnicas/">
                                 <span data-key="t-calendar">Técnicas y Modalidades</span>
                             </a>
                         </li>
                         <li>
-                            <a href="apps-calendar.html">
+                            <a href="../exactas/">
                                 <span data-key="t-calendar">Exactas y Naturales</span>
                             </a>
                         </li>
                 </li>
             </ul>
 
-            <li>
-                <a href="../favoritos/">
-                    <i data-feather="star"></i>
-                    <span data-key="t-dashboard">Favoritos</span>
-                </a>
-            </li>
+        <?php        
+
+            if ($_SESSION["rol_id"] == 1) {
+                
+                echo '<li>
+                        <a href="../favoritos/">
+                            <i data-feather="star"></i>
+                            <span data-key="t-dashboard">Favoritos</span>
+                        </a>
+                    </li>';
+            }            
+
+        ?>
 
         </ul>
 

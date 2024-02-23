@@ -106,7 +106,8 @@
 
             $sql->execute();
 
-            $sql1 = "select last_insert_id() as 'usu_id'";
+            $sql1 = "SELECT LAST_INSERT_ID() AS 'usu_id', rol_id FROM tm_usuario WHERE usu_id = LAST_INSERT_ID()";
+            //$sql1 = "select last_insert_id() as 'usu_id'";
             $sql1 = $conectar->prepare($sql1);
             $sql1->execute();
             return $sql1->fetchAll();

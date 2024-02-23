@@ -5,7 +5,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Registro | La Usina Software - Mesa de Partes</title>
+        <title>Registro | La Usina Software - Asamblea Docente</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">

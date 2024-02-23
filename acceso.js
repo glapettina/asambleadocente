@@ -23,12 +23,12 @@ function handleCredentialResponse(response){
 
         success: function(data){
 
-            var data = JSON.parse(data);
-
-            
+            console.log(data);
+            var data = JSON.parse(data);  
+                        
 
             if (data == "0") {
-                console.log(data);
+                
                 window.location.href = 'view/home/'
 
             }else if(data == "1"){

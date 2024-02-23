@@ -20,7 +20,7 @@
 
      <link rel="stylesheet" href="../../assets/css/style.css">
         
-        <title>La Usina Software | Favoritos</title>
+        <title>La Usina Software | Jurídicas y Contables</title>
         
         <?php require_once("../html/head.php") ?>
 
@@ -52,12 +52,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0 font-size-18">Favoritos</h4>
+                                    <h4 class="mb-sm-0 font-size-18">Jurídicas y Contables</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                            <li class="breadcrumb-item active">Favoritos</li>
+                                            <li class="breadcrumb-item active">Jurídicas y Contables</li>
                                         </ol>
                                     </div>
 
@@ -68,7 +68,7 @@
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="card-header">
-                                            <h4 class="card-title">Listado de Favoritos</h4>
+                                            <h4 class="card-title">Listado de Jurídicas y Contables</h4>
                                         </div>
 
                                         <div class="card-body">                                       
@@ -76,16 +76,17 @@
                                             <table id="listado_table" class="table table-bordered dt-responsive  nowrap w-100">
                                                 <thead>
                                                     <tr>
-                                                        <th>Escuela</th>
-                                                        <th>Localidad</th>
-                                                        <th style="width:1%">Código</th>
-                                                        <th>Cargo</th>
+                                                        <th style="width:0.5%">Escuela</th>
+                                                        <th style="width:1%">Localidad</th>
+                                                        <th style="width:0.5%">Código</th>
+                                                        <th>Asignatura/Cargo</th>
                                                         <th style="width:1%">ID</th>
                                                         <th>Horas</th>
                                                         <th style="width:1%">Turno</th>
                                                         <th>Origen</th>
                                                         <th>Docente</th>
                                                         <th></th>
+
                                                         
                                                     </tr>
                                                 </thead>
@@ -115,6 +116,18 @@
         </div>
         <!-- END layout-wrapper -->
 
+        <?php
+        
+            if ($_SESSION["rol_id"] == 3) {
+                
+                require_once("mnt.php");
+            }else {
+
+                require_once("mntfav.php");
+            }
+
+        ?>
+
         
         
         
@@ -126,7 +139,7 @@
 
         <?php require_once("../html/js.php") ?>
 
-        <script type="text/javascript" src="favoritos.js"></script>
+        <script type="text/javascript" src="contables.js"></script>
 
         
 

@@ -17,7 +17,7 @@
     <head>
         
         
-        <title>La Usina Software | Inicio Mesa de Partes</title>
+        <title>La Usina Software | Inicio Asamblea Docente</title>
         
         <?php require_once("../html/head.php") ?>
 
@@ -53,7 +53,7 @@
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                                             <li class="breadcrumb-item active">Inicio</li>
                                         </ol>
                                     </div>
@@ -63,11 +63,14 @@
 
                             <div class="card border border-primary">
                                     <div class="card-header bg-transparent border-primary">
-                                        <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i>Instrucciones para el registro de Trámites</h5>
+                                        <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i>Favoritos</h5>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Leer Atentamente</h5>
-                                        <p class="card-text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                                        <h5 class="card-title">Abrir el menú Vacantes Asamblea, luego seleccionar el área de interés. Para filtrar el listado, en la opción Buscar, se puede poner, por ej. “200”, qué sería el código correspondiente al cargo de Preceptor. Luego tocar en la estrella correspondiente a la vacante y se abrirá una ventana con el detalle de la vacante, por último tocar en Favorito y un mensaje nos informará que la vacante fue agregada en la sección de Favoritos.
+                                            Al intentar enviar una vacante que ya se encuentra en Favoritos, el sistema mostrará un mensaje diciendo que la vacante ya se encuentra en la lista de favoritos.
+                                            Para acceder a Favoritos, dirigirse al correspondiente menú y allí estarán todos las vacantes marcadas como Favoritos.
+                                            Para eliminar una vacante del listado de favoritos, se deberá tocar en el icono del “cesto de basura”.
+                                        </p>
                                     </div>
                                 </div>
                         </div>

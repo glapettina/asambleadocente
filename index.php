@@ -21,6 +21,8 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
 
+        <link rel="icon" href="assets/image/logo-sm.png">
+
         <!-- preloader css -->
         <link rel="stylesheet" href="assets/css/preloader.min-1.css" type="text/css">
 
@@ -143,7 +145,7 @@
 
                                             <ul class="list-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <div id="g_id_onload" data-client_id="81131178575-fcnvuu1vt3sfb26e51hojonupnh0oig0.apps.googleusercontent.com" 
+                                                    <div id="g_id_onload" data-client_id="81131178575-ss4040j6mmmc7vib57mm6micqls194dm.apps.googleusercontent.com" 
                                                     data-context="signin" 
                                                     data-ux_mode="popup" 
                                                     data-callback="handleCredentialResponse" 
@@ -198,7 +200,6 @@
                                             <div class="carousel-indicators carousel-indicators-rounded justify-content-start ms-0 mb-0">
                                                 <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                                 <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                <button type="button" data-bs-target="#reviewcarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                             </div>
                                             <!-- end carouselIndicators -->
                                             <div class="carousel-inner">
@@ -206,12 +207,8 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
-                                                            imposing change
-                                                            on myself. It's a lot more progressing fun than looking back.
-                                                            That's why
-                                                            I ultricies enim
-                                                            at malesuada nibh diam on tortor neaded to throw curve balls.”
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Estamos encantados de tenerlos en nuestra casa, 
+                                                            en nombre de toda la ESRN 153 les damos nuestra más cálida bienvenida y los mejores deseos.”
                                                         </h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
@@ -219,9 +216,9 @@
                                                                     <img src="assets/picture/avatar-1-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
                                                                 </div>
                                                                 <div class="flex-grow-1 ms-3 mb-4">
-                                                                    <h5 class="font-size-18 text-white">Richard Drews
+                                                                    <h5 class="font-size-18 text-white">Natalia Toletti Del Pino
                                                                     </h5>
-                                                                    <p class="mb-0 text-white-50">Web Designer</p>
+                                                                    <p class="mb-0 text-white-50">Directora</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -232,49 +229,25 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Our task must be to
-                                                            free ourselves by widening our circle of compassion to embrace
-                                                            all living
-                                                            creatures and
-                                                            the whole of quis consectetur nunc sit amet semper justo. nature
-                                                            and its beauty.”</h4>
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“El éxito llega a quienes están dispuestos a alcanzarlo. Es la suma de la buena actitud y el trabajo.
+                                                            Éxito a todxs compañerxs
+                                                            .”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <div class="flex-shrink-0">
                                                                     <img src="assets/picture/avatar-2-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
                                                                 </div>
                                                                 <div class="flex-grow-1 ms-3 mb-4">
-                                                                    <h5 class="font-size-18 text-white">Rosanna French
+                                                                    <h5 class="font-size-18 text-white">Soledad López
                                                                     </h5>
-                                                                    <p class="mb-0 text-white-50">Web Developer</p>
+                                                                    <p class="mb-0 text-white-50">Vicedirectora</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="carousel-item">
-                                                    <div class="testi-contain text-white">
-                                                        <i class="bx bxs-quote-alt-left text-success display-6"></i>
-
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I've learned that
-                                                            people will forget what you said, people will forget what you
-                                                            did,
-                                                            but people will never forget
-                                                            how donec in efficitur lectus, nec lobortis metus you made them
-                                                            feel.”</h4>
-                                                        <div class="mt-4 pt-3 pb-5">
-                                                            <div class="d-flex align-items-start">
-                                                                <img src="assets/picture/avatar-3-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
-                                                                <div class="flex-1 ms-3 mb-4">
-                                                                    <h5 class="font-size-18 text-white">Ilse R. Eaton</h5>
-                                                                    <p class="mb-0 text-white-50">Manager
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                             <!-- end carousel-inner -->
                                         </div>
