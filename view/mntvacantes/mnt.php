@@ -49,8 +49,8 @@
                     
                 </div>
                 <div class="col-lg-6">                    
-                            <label for="turno" class="form-label">Turno (*)</label>
-                        <select class="form-select" data-trigger="" name="turno" id="turno" placeholder="Seleccionar" required>
+                            <label for="turno" class="form-label">Turno</label>
+                        <select class="form-select" data-trigger="" name="turno" id="turno" placeholder="Seleccionar">
                             <option value="">Seleccionar</option>
                             <option value="M">Mañana</option>
                             <option value="T">Tarde</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-lg-12">
                     
-                        <label for="origen" class="form-label">Origen (*)</label>
+                        <label for="origen" class="form-label">Origen</label>
                         <input class="form-control" type="text" value="" id="origen" name="origen">
                     
                 </div>
