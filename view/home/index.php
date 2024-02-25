@@ -66,7 +66,8 @@
                                         <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i>Favoritos</h5>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Abrir el menú Vacantes Asamblea, luego seleccionar el área de interés. Para filtrar el listado, en la opción Buscar, se puede poner, por ej. “200”, qué sería el código correspondiente al cargo de Preceptor. Luego tocar en la estrella correspondiente a la vacante y se abrirá una ventana con el detalle de la vacante, por último tocar en Favorito y un mensaje nos informará que la vacante fue agregada en la sección de Favoritos.
+                                        <h5 class="card-title">Generar Listado de Favoritos</h5>
+                                        <p style="text-align: justify;line-height:2em;">Abrir el menú Vacantes Asamblea, luego seleccionar el área de interés. Para filtrar el listado, en la opción Buscar, se puede poner, por ej. “200”, qué sería el código correspondiente al cargo de Preceptor. Luego tocar en la estrella correspondiente a la vacante y se abrirá una ventana con el detalle de la vacante, por último tocar en Favorito y un mensaje nos informará que la vacante fue agregada en la sección de Favoritos.
                                             Al intentar enviar una vacante que ya se encuentra en Favoritos, el sistema mostrará un mensaje diciendo que la vacante ya se encuentra en la lista de favoritos.
                                             Para acceder a Favoritos, dirigirse al correspondiente menú y allí estarán todos las vacantes marcadas como Favoritos.
                                             Para eliminar una vacante del listado de favoritos, se deberá tocar en el icono del “cesto de basura”.
