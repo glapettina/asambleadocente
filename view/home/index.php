@@ -75,6 +75,57 @@
                                     </div>
                                 </div>
                         </div>
+
+                            <div class="row">
+                                 <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/cargos.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Cargos</h4>
+                                        
+                                        <a href="../cargos/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+
+                                <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/comunicacion.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Comunicación y Expresión</h4>
+                                        
+                                        <a href="../comunicacion/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+                                <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/sociales.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ciencias Sociales</h4>
+                                        
+                                        <a href="../sociales/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+                                <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/juridicas.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Jurídicas y Contables</h4>
+                                        <a href="../contables/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+
+                                <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/tecnicas.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Técnicas y Modalidades</h4>
+                                        <a href="../tecnicas/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+                                <div class="card col-lg-4">
+                                    <img class="card-img-top img-fluid" src="../../assets/picture/exactas.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Exactas y Naturales</h4>
+                                        <a href="../exactas/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                    </div>
+                                </div>
+                                </div>
+
                         <!-- end page title -->
                         
                     </div> <!-- container-fluid -->

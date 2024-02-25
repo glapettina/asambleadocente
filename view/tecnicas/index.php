@@ -56,7 +56,7 @@
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="../home/">Home</a></li>
                                             <li class="breadcrumb-item active">Técnicas y Modalidades</li>
                                         </ol>
                                     </div>
