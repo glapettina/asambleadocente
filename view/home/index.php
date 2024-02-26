@@ -18,6 +18,16 @@
         
         
         <title>La Usina Software | Inicio Asamblea Docente</title>
+
+        <style>
+            .contenedor{
+                display: flex;                
+            }
+
+            .btn2{
+                margin-left: 30px;
+            }
+        </style>
         
         <?php require_once("../html/head.php") ?>
 
@@ -62,8 +72,10 @@
                             </div>
 
                             <div class="card border border-primary">
-                                    <div class="card-header bg-transparent border-primary">
-                                        <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i>Favoritos</h5>
+                                    <div class="card-header bg-transparent border-primary contenedor">
+                                        <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i><a href="../favoritos/" class="btn btn-primary waves-effect waves-light">Ir a Favoritos</a></h5>
+                                        <h5 class="my-0 text-primary btn2"><a href="../../assets/files/Modelo de Poder Asamblea 2024.pdf" target="_blank" class="btn btn-primary waves-effect waves-light">Decargar Poder (Editable)</a></h5>
+                                        
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Generar Listado de Favoritos</h5>
@@ -76,7 +88,8 @@
                                 </div>
                         </div>
 
-                            <div class="row">
+                            <div class="row">                            
+
                                  <div class="card col-lg-4">
                                     <img class="card-img-top img-fluid" src="../../assets/picture/cargos.jpg" alt="Card image cap">
                                     <div class="card-body">
