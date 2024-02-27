@@ -73,8 +73,9 @@
 
                             <div class="card border border-primary">
                                     <div class="card-header bg-transparent border-primary contenedor">
-                                        <h5 class="my-0 text-primary"><i class="mdi mdi-bullseye-arrow me-3"></i><a href="../favoritos/" class="btn btn-primary waves-effect waves-light">Ir a Favoritos</a></h5>
+                                        <h5 class="my-0 text-primary"><a href="../favoritos/" class="btn btn-primary waves-effect waves-light">Ir Listado Favoritos</a></h5>
                                         <h5 class="my-0 text-primary btn2"><a href="../../assets/files/Modelo de Poder Asamblea 2024.pdf" target="_blank" class="btn btn-primary waves-effect waves-light">Decargar Poder (Editable)</a></h5>
+                                        <h5 class="my-0 text-primary btn2"><a href="../../assets/files/Formulario DDJJ.doc" target="_blank" class="btn btn-primary waves-effect waves-light">Decargar Formulario DDJJ</a></h5>
                                         
                                     </div>
                                     <div class="card-body">
