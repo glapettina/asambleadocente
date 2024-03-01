@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         localhost
+-- Host:                         127.0.0.1
 -- Versión del servidor:         10.4.11-MariaDB - mariadb.org binary distribution
 -- SO del servidor:              Win64
 -- HeidiSQL Versión:             12.6.0.6765
@@ -232,9 +232,9 @@ CREATE TABLE IF NOT EXISTS `td_menu_detalle` (
   `fech_elim` datetime DEFAULT NULL,
   `est` int(11) DEFAULT 1,
   PRIMARY KEY (`mend_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla asamblea.td_menu_detalle: ~35 rows (aproximadamente)
+-- Volcando datos para la tabla asamblea.td_menu_detalle: ~37 rows (aproximadamente)
 INSERT INTO `td_menu_detalle` (`mend_id`, `rol_id`, `men_id`, `mend_permi`, `fech_crea`, `fech_modi`, `fech_elim`, `est`) VALUES
 	(1, 3, 1, 'No', '2024-01-23 17:50:04', '2024-01-25 18:59:19', NULL, 1),
 	(2, 3, 2, 'No', '2024-01-23 17:50:04', '2024-01-25 17:33:51', NULL, 1),
@@ -272,7 +272,10 @@ INSERT INTO `td_menu_detalle` (`mend_id`, `rol_id`, `men_id`, `mend_permi`, `fec
 	(42, 3, 12, 'Si', '2024-02-08 19:38:28', '2024-02-08 19:38:38', NULL, 1),
 	(43, 3, 13, 'Si', '2024-02-15 18:58:20', '2024-02-15 18:58:23', NULL, 1),
 	(44, 1, 12, 'No', '2024-02-21 13:51:44', NULL, NULL, 1),
-	(45, 1, 13, 'No', '2024-02-21 13:51:44', NULL, NULL, 1);
+	(45, 1, 13, 'No', '2024-02-21 13:51:44', NULL, NULL, 1),
+	(46, 3, 14, 'Si', '2024-02-25 14:46:25', '2024-02-25 14:46:28', NULL, 1),
+	(47, 3, 15, 'Si', '2024-03-01 09:20:39', '2024-03-01 09:20:47', NULL, 1),
+	(48, 3, 16, 'Si', '2024-03-01 09:20:39', '2024-03-01 09:20:51', NULL, 1);
 
 -- Volcando estructura para tabla asamblea.td_vacante_docente
 CREATE TABLE IF NOT EXISTS `td_vacante_docente` (
@@ -282,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `td_vacante_docente` (
   PRIMARY KEY (`vacanted_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla asamblea.td_vacante_docente: ~8 rows (aproximadamente)
+-- Volcando datos para la tabla asamblea.td_vacante_docente: ~10 rows (aproximadamente)
 INSERT INTO `td_vacante_docente` (`vacanted_id`, `usu_id`, `vacante_id`) VALUES
 	(13, 53, 1),
 	(14, 53, 8),
@@ -384,9 +387,9 @@ CREATE TABLE IF NOT EXISTS `tm_menu` (
   `fech_elim` datetime DEFAULT NULL,
   `est` int(11) DEFAULT 1,
   PRIMARY KEY (`men_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla asamblea.tm_menu: ~13 rows (aproximadamente)
+-- Volcando datos para la tabla asamblea.tm_menu: ~14 rows (aproximadamente)
 INSERT INTO `tm_menu` (`men_id`, `men_nom`, `men_nom_vista`, `men_icon`, `men_ruta`, `fech_crea`, `fech_modi`, `fech_elim`, `est`) VALUES
 	(1, 'home', 'Inicio', 'home', '../home/', '2024-01-23 13:48:05', NULL, NULL, 1),
 	(2, 'nuevotramite', 'Nuevo Trámite', 'grid', '../NuevoTramite/', '2024-01-23 13:48:49', NULL, NULL, 1),
@@ -400,7 +403,10 @@ INSERT INTO `tm_menu` (`men_id`, `men_nom`, `men_nom_vista`, `men_icon`, `men_ru
 	(10, 'mnttipo', 'Mantenimiento Tipo', 'users', '../mnttipo/', '2024-01-23 13:57:38', NULL, NULL, 1),
 	(11, 'mntrol', 'Mantenimiento Rol', 'users', '../mntrol/', '2024-01-23 13:58:28', NULL, NULL, 1),
 	(12, 'mntescuela', 'Mantenimiento Escuela', 'award', '../mntescuela/', '2024-02-08 19:36:05', NULL, NULL, 1),
-	(13, 'mntvacantes', 'Mantenimiento Vacantes', 'grid', '../mntvacantes/', '2024-02-15 18:58:11', NULL, NULL, 1);
+	(13, 'mntvacantes', 'Mant. Vacantes', 'grid', '../mntvacantes/', '2024-02-15 18:58:11', NULL, NULL, 1),
+	(14, 'mntvacantesmini', 'Mant. Vacantes Mini', 'grid', '../mntvacantesmini/', '2024-02-25 14:46:06', NULL, NULL, 1),
+	(15, 'pantalla', 'Pantalla Asamblea', 'grid', '../pantalla/', '2024-03-01 08:53:47', NULL, NULL, 1),
+	(16, 'pantallamini', 'Pantalla Mini Asamblea', 'grid', '../pantallamini/', '2024-03-01 09:04:25', NULL, NULL, 1);
 
 -- Volcando estructura para tabla asamblea.tm_rol
 CREATE TABLE IF NOT EXISTS `tm_rol` (
@@ -476,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `tm_usuario` (
   PRIMARY KEY (`usu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla asamblea.tm_usuario: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla asamblea.tm_usuario: ~4 rows (aproximadamente)
 INSERT INTO `tm_usuario` (`usu_id`, `usu_nomape`, `usu_correo`, `usu_pass`, `usu_img`, `rol_id`, `fech_crea`, `fech_acti`, `fech_modi`, `fech_elim`, `est`) VALUES
 	(1, 'Guillermo Lapettina', 'glapettina@gmail.com', '8qOuUEJQ8GIZKghl3h1xRgBZxqrV6sCCcq0/8MrWRHs=', '', 3, '2024-01-02 20:00:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
 	(53, 'Guillermo Lapettina', 'guillermolapettina@gmail.com', 'eBaTcYKbRC9NhBLI9dFfkP5V0Tt3G6hfJqvX+G7rnFs=', 'https://lh3.googleusercontent.com/a/ACg8ocKC4gWCjj4V9TJwrNE51kQROAfvnNcz7S2IGDxJzqMo=s96-c', 1, '2024-02-21 18:16:57', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
@@ -500,12 +506,12 @@ CREATE TABLE IF NOT EXISTS `tm_vacante` (
   `fech_elim` datetime DEFAULT NULL,
   `estado` int(11) DEFAULT 1,
   PRIMARY KEY (`vacante_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla asamblea.tm_vacante: ~19 rows (aproximadamente)
+-- Volcando datos para la tabla asamblea.tm_vacante: ~21 rows (aproximadamente)
 INSERT INTO `tm_vacante` (`vacante_id`, `area_id`, `esc_id`, `codigo`, `asignatura`, `id`, `horas`, `turno`, `origen`, `docente`, `fech_crea`, `fech_modi`, `fech_elim`, `estado`) VALUES
-	(1, 1, 2, 400, 'Bibliotecario', 316, NULL, 'M', 'Lic. Art. 15º García, Laura', '', NULL, '2024-02-21 14:03:26', NULL, 1),
-	(2, 1, 2, 310, 'Ayudante de Clases y TP de Física', 39, '', 'M', 'Lic. Art. 15° Jensen, Paula', '', NULL, '2024-02-20 20:56:44', NULL, 1),
+	(1, 1, 2, 400, 'Bibliotecario', 316, NULL, 'M', 'Lic. Art. 15º García, Laura', 'LARRONDO, Carla', NULL, '2024-02-25 19:46:21', NULL, 1),
+	(2, 1, 2, 310, 'Ayudante de Clases y TP de Física', 39, '', 'M', 'Lic. Art. 15° Jensen, Paula', '', NULL, '2024-02-20 20:56:44', '2024-03-01 09:43:26', 0),
 	(3, 1, 2, 305, 'Ayudante de Clases y TP de Química', 273, '', 'M', 'Lic. Art. 15° Maquez, Marcela', '', NULL, NULL, NULL, 1),
 	(6, 2, 11, 1900, 'Lengua y Literatura', 25, '4', 'N', 'Lic. Art. Nº 15º SOSA, Hugo', NULL, NULL, NULL, NULL, 1),
 	(7, 2, 11, 1900, 'Lengua y Literatura', 26, '4', 'N', 'Lic. Art. Nº 15º SOSA, Hugo', NULL, NULL, NULL, NULL, 1),
@@ -517,14 +523,39 @@ INSERT INTO `tm_vacante` (`vacante_id`, `area_id`, `esc_id`, `codigo`, `asignatu
 	(13, 5, 2, 5000, 'Dibujo Técnico', 574, '4', 'T', '1224/15', NULL, '2024-02-15 19:36:30', NULL, NULL, 1),
 	(14, 5, 13, 6024, 'IEA Producción Porcina', 105, '20', 'M', 'Res 807/16 - Renuncia Mozzicafreddo Nazareno', NULL, '2024-02-15 19:49:41', NULL, '2024-02-15 20:37:33', 0),
 	(18, 1, 15, 8064, 'REVE', 252, '9', 'M', 'Res. 1895/18', 'FIGUEROA, Alejandra', '2024-02-20 21:01:00', '2024-02-21 14:05:14', NULL, 1),
-	(21, 1, 15, 200, 'Preceptor', 3, '20', 'M', 'LIC. ARTICULO Nº 15º ROSANA ZURITA', NULL, '2024-02-21 18:30:39', NULL, NULL, 1),
+	(21, 1, 15, 200, 'Preceptor', 3, '20', 'M', 'LIC. ARTICULO Nº 15º ROSANA ZURITA', 'PERFUMO, Maiten', '2024-02-21 18:30:39', '2024-02-25 19:46:45', NULL, 1),
 	(25, 3, 4, 1100, 'Educación Cívica', 23, '2', 'N', 'Lic. Art 15 Argaña María. E', '', '2024-02-21 20:09:56', '2024-02-21 20:10:23', NULL, 1),
 	(26, 3, 5, 4100, 'Relaciones Públicas', 213, '3', 'V', 'Lic. Art 15 Argaña María. E', NULL, '2024-02-21 20:11:59', NULL, NULL, 1),
 	(27, 6, 11, 2300, 'Química', 39, '3', 'N', 'Resol. 210/07', '', '2024-02-21 20:26:58', '2024-02-21 20:29:17', NULL, 1),
 	(28, 6, 11, 2000, 'Matemática', 19, '4', 'N', 'Res. 288/06', NULL, '2024-02-21 20:27:52', NULL, NULL, 1),
 	(29, 6, 5, 1300, 'Física', 14, '3', 'V', 'Res. 1536/00', NULL, '2024-02-21 20:28:23', NULL, NULL, 1),
 	(30, 6, 5, 700, 'Biología', 12, '2', 'V', 'Ren. Molina Mirian', NULL, '2024-02-21 20:28:58', NULL, NULL, 1),
-	(31, 3, 9, 1900, 'CONTABILIDAD', 999, '', '', '', NULL, '2024-02-24 09:44:56', NULL, NULL, 1);
+	(31, 3, 9, 1900, 'CONTABILIDAD', 999, '', '', '', 'Fernández Pablo', '2024-02-24 09:44:56', '2024-02-25 19:38:47', NULL, 1),
+	(32, 1, 11, 200, 'PRECEPTOR', 53, '', 'M', '', NULL, '2024-03-01 09:32:43', NULL, NULL, 1);
+
+-- Volcando estructura para tabla asamblea.tm_vacantemini
+CREATE TABLE IF NOT EXISTS `tm_vacantemini` (
+  `vacante_id` int(11) NOT NULL AUTO_INCREMENT,
+  `area_id` int(11) DEFAULT NULL,
+  `esc_id` int(11) DEFAULT NULL,
+  `codigo` int(11) DEFAULT NULL,
+  `asignatura` varchar(200) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
+  `horas` varchar(5) DEFAULT NULL,
+  `turno` varchar(5) DEFAULT NULL,
+  `origen` varchar(50) DEFAULT NULL,
+  `docente` varchar(50) DEFAULT NULL,
+  `fech_crea` datetime DEFAULT current_timestamp(),
+  `fech_modi` datetime DEFAULT NULL,
+  `fech_elim` datetime DEFAULT NULL,
+  `estado` int(11) DEFAULT 1,
+  PRIMARY KEY (`vacante_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+-- Volcando datos para la tabla asamblea.tm_vacantemini: ~0 rows (aproximadamente)
+INSERT INTO `tm_vacantemini` (`vacante_id`, `area_id`, `esc_id`, `codigo`, `asignatura`, `id`, `horas`, `turno`, `origen`, `docente`, `fech_crea`, `fech_modi`, `fech_elim`, `estado`) VALUES
+	(1, 1, 11, 200, 'PRECEPTOR', 25, '', 'M', '', NULL, '2024-03-01 09:38:47', NULL, NULL, 1),
+	(2, 1, 4, 200, 'PRECEPTOR', 12, '', 'T', '', NULL, '2024-03-01 09:42:19', NULL, '2024-03-01 09:44:35', 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

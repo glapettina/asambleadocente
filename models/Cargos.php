@@ -108,6 +108,34 @@
 
         }
 
+        public function update_cargo_mini($vacante_id, $docente){
+
+            /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
+
+            $conectar = parent::conexion();
+
+            /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+            parent::set_names();
+
+           /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+            $sql="UPDATE tm_vacantemini SET docente = ?, fech_modi = NOW() WHERE vacante_id = ?";
+
+            /* TODO: Prepara la consulta SQL */
+
+            $sql = $conectar->prepare($sql);
+
+            $sql->bindValue(1, $docente);
+            $sql->bindValue(2, $vacante_id);
+
+            /* TODO: Ejecutar la consulta SQL */
+
+            $sql->execute();
+
+
+        }
+
         public function get_vacante_id($id){
 
             /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
@@ -250,6 +278,36 @@
         $sql->execute();
 
         return $sql->fetchAll();
+}
+
+public function get_vacante_x_docente_mini($usu_id, $vacante_id){
+
+    /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+    $conectar = parent::conexion();
+
+    /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+    parent::set_names();
+
+/*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+    $sql="SELECT * FROM td_vacante_docente_mini WHERE usu_id = ? AND vacante_id =?";
+
+    /* TODO: Prepara la consulta SQL */
+
+    $sql = $conectar->prepare($sql);
+
+    /* TODO: Vincular los valores a los parámetros de la consulta */
+
+    $sql->bindValue(1, $usu_id);
+    $sql->bindValue(2, $vacante_id);
+
+    /* TODO: Ejecutar la consulta SQL */
+
+    $sql->execute();
+
+    return $sql->fetchAll();
 }
 
     }
