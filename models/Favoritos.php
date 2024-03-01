@@ -51,6 +51,55 @@
 
         }
 
+        public function get_favoritos_mini($usu_id){
+
+            /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+            $conectar = parent::conexion();
+
+            /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+            parent::set_names();
+
+           /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+            $sql="SELECT 	
+            td_vacante_docente_mini.vacanted_id,
+            td_vacante_docente_mini.usu_id,
+            td_vacante_docente_mini.vacante_id,
+            tm_vacantemini.vacante_id,
+            tm_vacantemini.area_id,
+            tm_vacantemini.esc_id,
+            tm_vacantemini.codigo,
+            tm_vacantemini.asignatura,
+            tm_vacantemini.id,
+            tm_vacantemini.horas,
+            tm_vacantemini.turno,
+            tm_vacantemini.origen,
+            tm_vacantemini.docente,
+            tm_area.area_nom,
+            tm_escuela.esc_nom,
+            tm_escuela.esc_loc
+            FROM td_vacante_docente_mini
+            INNER JOIN tm_vacantemini ON td_vacante_docente_mini.vacante_id = tm_vacantemini.vacante_id
+            INNER JOIN tm_area ON tm_vacantemini.area_id = tm_area.area_id
+            INNER JOIN tm_escuela ON tm_vacantemini.esc_id = tm_escuela.esc_id
+            WHERE tm_vacantemini.estado = 1 AND td_vacante_docente_mini.usu_id = ?";
+
+            /* TODO: Prepara la consulta SQL */
+
+            $sql = $conectar->prepare($sql);
+
+            $sql->bindValue(1, $usu_id);
+
+            /* TODO: Ejecutar la consulta SQL */
+
+            $sql->execute();
+
+            return $sql->fetchAll();
+
+        }
+
 
         public function eliminar_vacante_docente($vacante_id){
 
@@ -81,6 +130,36 @@
             $sql->execute();
 
     }
+
+    public function eliminar_vacante_docente_mini($vacante_id){
+
+        $usuario = $_SESSION["usu_id"];
+
+        /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+        $conectar = parent::conexion();
+
+        /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+        parent::set_names();
+
+        /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+        $sql="DELETE FROM td_vacante_docente_mini WHERE usu_id = '$usuario' and vacante_id = ?";
+
+        /* TODO: Prepara la consulta SQL */
+
+        $sql = $conectar->prepare($sql);
+
+        /* TODO: Vincular los valores a los parámetros de la consulta */
+
+        $sql->bindValue(1, $vacante_id);
+
+        /* TODO: Ejecutar la consulta SQL */
+
+        $sql->execute();
+
+}
 
     public function get_escuela_nombre($esc_nom){
 

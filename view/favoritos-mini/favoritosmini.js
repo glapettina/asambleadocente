@@ -21,7 +21,7 @@ function guardaryeditar(e){
 
 
     $.ajax({
-        url: "../../controller/cargos.php?op=editarmini",
+        url: "../../controller/cargos.php?op=editar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -54,8 +54,25 @@ function guardaryeditar(e){
                 icon: "error", 
                 confirmButtonColor: "#5156be" 
               });
-        }
-   
+        }/* else if(datos == 2){
+            $("#vacante_id").val('');
+            $("#mnt_form")[0].reset();
+
+            $("#listado_table").DataTable().ajax.reload();
+
+            $("#mnt_modal").modal('hide');
+
+           Swal.fire({ 
+            title: "Asamblea Docente", 
+            html: "Se actualizó con éxito.", 
+            icon: "success", 
+            confirmButtonColor: "#5156be" 
+          });
+        }  */
+
+        
+
+            
         }
     });
 
@@ -69,7 +86,7 @@ function marcar(e){
 
 
     $.ajax({
-        url: "../../controller/cargos.php?op=marcarmini",
+        url: "../../controller/cargos.php?op=marcar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -98,7 +115,7 @@ function marcar(e){
             
             Swal.fire({ 
                 title: "Asamblea Docente", 
-                html: "La vacante ya se encuentra en su lista de favoritos.", 
+                html: "Registro ya marcado como favorito.", 
                 icon: "error", 
                 confirmButtonColor: "#5156be" 
               });
@@ -135,7 +152,7 @@ $(document).ready(function(){
             'pdfHtml5'
         ],
         "ajax":{
-            url: '../../controller/cargos.php?op=listarmini',
+            url: '../../controller/favoritos.php?op=listarmini',
             type: "get",
             dataType: "json",
             error:function(e){
@@ -185,7 +202,7 @@ $(document).on("click", "#btnnuevo", function(){
 function editar(vacante_id){
 
     $("#myModalLabel").html('Editar Registro');
-    $.post("../../controller/cargos.php?op=mostrar_docente_mini", {vacante_id : vacante_id}, function(data){
+    $.post("../../controller/cargos.php?op=mostrar_docente", {vacante_id : vacante_id}, function(data){
 
         data = JSON.parse(data);
         $("#vacante_id").val(data.vacante_id);
@@ -194,11 +211,35 @@ function editar(vacante_id){
     });   
 }
 
+function eliminar(vacante_id){
 
-function favoritoMini(vacante_id){
+    Swal.fire({
+        title: "Está seguro de eliminar la vacante de favoritos?",
+        icon: "question",
+        showDenyButton: true,
+        confirmButtonText: "Si",
+        denyButtonText: `No`
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            $.post("../../controller/favoritos.php?op=eliminarmini", {vacante_id : vacante_id}, function(data){
+                $("#listado_table").DataTable().ajax.reload();
+                Swal.fire({ 
+                    title: "Asamblea Docente", 
+                    html: "Se eliminó con éxito.", 
+                    icon: "success", 
+                    confirmButtonColor: "#5156be" 
+                  });
+                
+            });   
+        } 
+      });
+}
+
+function favorito(vacante_id){
 
     $("#myModalLabel").html('Marcar Favorito');
-    $.post("../../controller/cargos.php?op=mostrar_mini", {vacante_id : vacante_id}, function(data){
+    $.post("../../controller/cargos.php?op=mostrar", {vacante_id : vacante_id}, function(data){
 
         data = JSON.parse(data);
         $("#vacante_id").val(data.vacante_id);

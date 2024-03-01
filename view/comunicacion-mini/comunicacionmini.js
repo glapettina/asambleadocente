@@ -55,7 +55,10 @@ function guardaryeditar(e){
                 confirmButtonColor: "#5156be" 
               });
         }
-   
+
+        
+
+            
         }
     });
 
@@ -135,7 +138,7 @@ $(document).ready(function(){
             'pdfHtml5'
         ],
         "ajax":{
-            url: '../../controller/cargos.php?op=listarmini',
+            url: '../../controller/comunicacion.php?op=listarmini',
             type: "get",
             dataType: "json",
             error:function(e){
@@ -194,6 +197,30 @@ function editar(vacante_id){
     });   
 }
 
+function eliminar(tra_id){
+
+    Swal.fire({
+        title: "Está seguro de eliminar el registro?",
+        icon: "question",
+        showDenyButton: true,
+        confirmButtonText: "Si",
+        denyButtonText: `No`
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            $.post("../../controller/tramite.php?op=eliminarmini", {tra_id : tra_id}, function(data){
+                $("#listado_table").DataTable().ajax.reload();
+                Swal.fire({ 
+                    title: "Mesa de Partes", 
+                    html: "Se eliminó con éxito.", 
+                    icon: "success", 
+                    confirmButtonColor: "#5156be" 
+                  });
+                
+            });   
+        } 
+      });
+}
 
 function favoritoMini(vacante_id){
 

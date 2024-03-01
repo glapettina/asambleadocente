@@ -3,20 +3,22 @@
 require_once("../config/conexion.php");
 require_once("../models/Sociales.php");
 require_once("../models/Vacantes.php");
+require_once("../models/Cargos.php");
 
    /*  TODO: Crea una instancia de la clase Trámite */
 
    $sociales = new Sociales();
    $vacante = new Vacantes();
+   $cargo = new Cargos();
 
     /* TODO: Utiliza una estructura switch para determinar la operación a realizar según el valor de $_GET["op"] */
 
     switch ($_GET["op"]) {
 
 
-        case 'listar':
+        case 'listarmini':
 
-            $datos = $sociales->get_sociales();
+            $datos = $sociales->get_sociales_mini();
             $data = Array();
             foreach ($datos as $row) {
                 
@@ -48,7 +50,7 @@ require_once("../models/Vacantes.php");
 
                 if ($_SESSION["rol_id"] == 1) {
 
-                    $sub_array[] = '<button type="button" class="btn btn-soft-info waves-effect waves-light btn-sm" onClick="favorito('.$row["vacante_id"].')"><i class="bx bx bxs-star font-size-16 align-middle"></i></button>';              
+                    $sub_array[] = '<button type="button" class="btn btn-soft-info waves-effect waves-light btn-sm" onClick="favoritoMini('.$row["vacante_id"].')"><i class="bx bx bxs-star font-size-16 align-middle"></i></button>';              
                 
                 }
                 
@@ -65,30 +67,10 @@ require_once("../models/Vacantes.php");
 
         break;    
 
-        case 'editar':
-
-            //$datos = $vacante->get_vacante_id($_POST["id"]);
-
-            /* if (is_array($datos) == true and count($datos) == 0) {
-                if (empty($_POST["vacante_id"])) {
-                
-                    $cargo->insert_cargo($_POST["esc_id"], 
-                    $_POST["codigo"], $_POST["asignatura"],
-                    $_POST["id"], $_POST["horas"],
-                    $_POST["turno"], $_POST["origen"],
-                    $_POST["docente"]);
-                    echo "1";
+        case 'editarmini':
     
-                }else if(is_array($datos) == true and count($datos) == 0){ */
-    
-                    $cargo->update_cargo($_POST["vacante_id"], $_POST["docente"]);
-                    echo "2";
-                /* }         
-            }else {
-                echo "0";
-            } */
-
-               
+            $cargo->update_cargo_mini($_POST["vacante_id"], $_POST["docente"]);
+            echo "2";
 
         break;
 
@@ -116,7 +98,7 @@ require_once("../models/Vacantes.php");
         
         break;
 
-        case "mostrar_docente":
+        case "mostrar_docente_mini":
         
             $datos = $vacante->get_vacante_x_id($_POST["vacante_id"]);
             if (is_array($datos) == true and count($datos) > 0) {
@@ -132,11 +114,6 @@ require_once("../models/Vacantes.php");
 
         
         break;
-
-        /* case 'eliminar':
-            $datos = $tramite->eliminar_tramite($_POST["tra_id"]);
-            echo "1";
-        break; */
 
         case 'marcar':
  

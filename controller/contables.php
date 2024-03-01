@@ -63,7 +63,58 @@ require_once("../models/Vacantes.php");
 
             echo json_encode($results);
 
-        break;    
+        break;   
+        
+        case 'listarmini':
+
+            $datos = $contables->get_contables_mini();
+            $data = Array();
+            foreach ($datos as $row) {
+                
+                $sub_array = array();
+                $sub_array[] = $row["esc_nom"];
+                $sub_array[] = $row["esc_loc"];
+                $sub_array[] = $row["codigo"];
+                $sub_array[] = $row["asignatura"];
+                $sub_array[] = $row["id"];
+                $sub_array[] = $row["horas"];
+                $sub_array[] = $row["turno"];
+                $sub_array[] = $row["origen"];
+                
+                if ($row["docente"] == "") {
+                    
+                    $sub_array[] = '<span class="label label-pill label-success">Vacante</span>';
+
+                }else{
+
+                    $sub_array[] = '<span class="label label-pill label-danger">'.$row["docente"].'</span>'; 
+
+                }
+                
+                
+                if ($_SESSION["rol_id"] == 3) {
+
+                    $sub_array[] = '<button type="button" class="btn btn-soft-warning waves-effect waves-light btn-sm" onClick="editar('.$row["vacante_id"].')"><i class="bx bx-edit-alt font-size-16 align-middle"></i></button>';
+                }
+
+                if ($_SESSION["rol_id"] == 1) {
+
+                    $sub_array[] = '<button type="button" class="btn btn-soft-info waves-effect waves-light btn-sm" onClick="favoritoMini('.$row["vacante_id"].')"><i class="bx bx bxs-star font-size-16 align-middle"></i></button>';              
+                
+                }
+                
+                $data[] = $sub_array;
+            }
+
+            $results = array(
+                "sEcho"=>1,
+                "iTotalRecords"=>count($data),
+                "iTotalDisplayRecords"=>count($data),
+                "aaData"=>$data);
+
+            echo json_encode($results);
+
+        break; 
 
         case 'editar':
 

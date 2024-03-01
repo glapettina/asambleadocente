@@ -45,6 +45,49 @@
 
         }
 
+        public function get_cargos_mini(){
+
+            /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+            $conectar = parent::conexion();
+
+            /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+            parent::set_names();
+
+           /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+            $sql="SELECT 
+            tm_vacantemini.vacante_id,
+            tm_vacantemini.area_id,
+            tm_vacantemini.esc_id,
+            tm_vacantemini.codigo,
+            tm_vacantemini.asignatura,
+            tm_vacantemini.id,
+            tm_vacantemini.horas,
+            tm_vacantemini.turno,
+            tm_vacantemini.origen,
+            tm_vacantemini.docente,
+            tm_area.area_nom,
+            tm_escuela.esc_nom,
+            tm_escuela.esc_loc
+            FROM tm_vacantemini
+            INNER JOIN tm_area ON tm_vacantemini.area_id = tm_area.area_id
+            INNER JOIN tm_escuela ON tm_vacantemini.esc_id = tm_escuela.esc_id
+            WHERE tm_vacantemini.estado = 1 AND tm_vacantemini.area_id = 1";
+
+            /* TODO: Prepara la consulta SQL */
+
+            $sql = $conectar->prepare($sql);
+
+            /* TODO: Ejecutar la consulta SQL */
+
+            $sql->execute();
+
+            return $sql->fetchAll();
+
+        }
+
         public function insert_cargo($esc_id, $codigo, $asignatura, $id, $horas, $turno, $origen, $docente){
 
             /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
@@ -250,6 +293,34 @@
 
     }
 
+    public function insert_favorito_mini($usu_id, $vacante_id){
+
+        /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */
+
+        $conectar = parent::conexion();
+
+        /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+        parent::set_names();
+
+       /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+        $sql="INSERT INTO td_vacante_docente_mini (usu_id, vacante_id) VALUES (?, ?)";
+
+        /* TODO: Prepara la consulta SQL */
+
+        $sql = $conectar->prepare($sql);
+
+        $sql->bindValue(1, $usu_id);
+        $sql->bindValue(2, $vacante_id);
+
+        /* TODO: Ejecutar la consulta SQL */
+
+        $sql->execute();
+
+
+    }
+
     public function get_vacante_x_docente($usu_id, $vacante_id){
 
         /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
@@ -280,35 +351,37 @@
         return $sql->fetchAll();
 }
 
-public function get_vacante_x_docente_mini($usu_id, $vacante_id){
+    public function get_vacante_x_docente_mini($usu_id, $vacante_id){
 
-    /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+        /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
 
-    $conectar = parent::conexion();
+        $conectar = parent::conexion();
 
-    /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+        /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
 
-    parent::set_names();
+        parent::set_names();
 
-/*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+    /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
 
-    $sql="SELECT * FROM td_vacante_docente_mini WHERE usu_id = ? AND vacante_id =?";
+        $sql="SELECT * FROM td_vacante_docente_mini WHERE usu_id = ? AND vacante_id =?";
 
-    /* TODO: Prepara la consulta SQL */
+        /* TODO: Prepara la consulta SQL */
 
-    $sql = $conectar->prepare($sql);
+        $sql = $conectar->prepare($sql);
 
-    /* TODO: Vincular los valores a los parámetros de la consulta */
+        /* TODO: Vincular los valores a los parámetros de la consulta */
 
-    $sql->bindValue(1, $usu_id);
-    $sql->bindValue(2, $vacante_id);
+        $sql->bindValue(1, $usu_id);
+        $sql->bindValue(2, $vacante_id);
 
-    /* TODO: Ejecutar la consulta SQL */
+        /* TODO: Ejecutar la consulta SQL */
 
-    $sql->execute();
+        $sql->execute();
 
-    return $sql->fetchAll();
-}
+        return $sql->fetchAll();
+        
+    }
+
 
     }
 

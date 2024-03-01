@@ -73,7 +73,7 @@
 
                             <div class="card border border-primary">
                                     <div class="card-header bg-transparent border-primary contenedor">
-                                        <h5 class="my-0 text-primary"><a href="../favoritos/" class="btn btn-primary waves-effect waves-light">Ir Listado Favoritos</a></h5>
+                                        <h5 class="my-0 text-primary"><a href="../favoritos-mini/" class="btn btn-primary waves-effect waves-light">Ir Listado Favoritos (Mini Asamblea)</a></h5>
                                         <h5 class="my-0 text-primary btn2"><a href="../../assets/files/Modelo de Poder Asamblea 2024.pdf" target="_blank" class="btn btn-primary waves-effect waves-light">Decargar Poder (Editable)</a></h5>
                                         <h5 class="my-0 text-primary btn2"><a href="../../assets/files/Formulario DDJJ.doc" target="_blank" class="btn btn-primary waves-effect waves-light">Decargar Formulario DDJJ</a></h5>
                                         
@@ -96,7 +96,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Cargos</h4>
                                         
-                                        <a href="../cargos/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../cargos-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
 
@@ -105,7 +105,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Comunicación y Expresión</h4>
                                         
-                                        <a href="../comunicacion/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../comunicacion-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
                                 <div class="card col-lg-4">
@@ -113,14 +113,14 @@
                                     <div class="card-body">
                                         <h4 class="card-title">Ciencias Sociales</h4>
                                         
-                                        <a href="../sociales/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../sociales-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
                                 <div class="card col-lg-4">
                                     <img class="card-img-top img-fluid" src="../../assets/picture/juridicas.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Jurídicas y Contables</h4>
-                                        <a href="../contables/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../contables-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
 
@@ -128,14 +128,14 @@
                                     <img class="card-img-top img-fluid" src="../../assets/picture/tecnicas.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Técnicas y Modalidades</h4>
-                                        <a href="../tecnicas/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../tecnicas-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
                                 <div class="card col-lg-4">
                                     <img class="card-img-top img-fluid" src="../../assets/picture/exactas.jpg" alt="Card image cap">
                                     <div class="card-body">
                                         <h4 class="card-title">Exactas y Naturales</h4>
-                                        <a href="../exactas/" class="btn btn-primary waves-effect waves-light">Ir...</a>
+                                        <a href="../exactas-mini/" class="btn btn-primary waves-effect waves-light">Ir...</a>
                                     </div>
                                 </div>
                                 </div>

@@ -45,6 +45,49 @@
 
         }
 
+        public function get_tecnicas_mini(){
+
+            /* TODO: Obtener la conexión a la base de datos utiliz&&o el método de la clase padre */
+
+            $conectar = parent::conexion();
+
+            /* TODO: Establecer el juego de caracteres a UTF-8 utiliz&&o el método de la clase padre */
+
+            parent::set_names();
+
+           /*  TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
+
+            $sql="SELECT 
+            tm_vacantemini.vacante_id,
+            tm_vacantemini.area_id,
+            tm_vacantemini.esc_id,
+            tm_vacantemini.codigo,
+            tm_vacantemini.asignatura,
+            tm_vacantemini.id,
+            tm_vacantemini.horas,
+            tm_vacantemini.turno,
+            tm_vacantemini.origen,
+            tm_vacantemini.docente,
+            tm_area.area_nom,
+            tm_escuela.esc_nom,
+            tm_escuela.esc_loc
+            FROM tm_vacantemini
+            INNER JOIN tm_area ON tm_vacantemini.area_id = tm_area.area_id
+            INNER JOIN tm_escuela ON tm_vacantemini.esc_id = tm_escuela.esc_id
+            WHERE tm_vacantemini.estado = 1 AND tm_vacantemini.area_id = 5";
+
+            /* TODO: Prepara la consulta SQL */
+
+            $sql = $conectar->prepare($sql);
+
+            /* TODO: Ejecutar la consulta SQL */
+
+            $sql->execute();
+
+            return $sql->fetchAll();
+
+        }
+
         public function insert_cargo($esc_id, $codigo, $asignatura, $id, $horas, $turno, $origen, $docente){
 
             /* TODO: Obtener la conexión a la base de datos utilizo el método de la clase padre */

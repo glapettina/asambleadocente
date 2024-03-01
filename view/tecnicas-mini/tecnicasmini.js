@@ -135,7 +135,7 @@ $(document).ready(function(){
             'pdfHtml5'
         ],
         "ajax":{
-            url: '../../controller/cargos.php?op=listarmini',
+            url: '../../controller/tecnicas.php?op=listarmini',
             type: "get",
             dataType: "json",
             error:function(e){

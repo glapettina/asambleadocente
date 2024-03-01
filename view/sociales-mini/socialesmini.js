@@ -55,8 +55,8 @@ function guardaryeditar(e){
                 confirmButtonColor: "#5156be" 
               });
         }
-   
-        }
+
+    }
     });
 
 }
@@ -135,7 +135,7 @@ $(document).ready(function(){
             'pdfHtml5'
         ],
         "ajax":{
-            url: '../../controller/cargos.php?op=listarmini',
+            url: '../../controller/sociales.php?op=listarmini',
             type: "get",
             dataType: "json",
             error:function(e){
