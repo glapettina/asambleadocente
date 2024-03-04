@@ -47,6 +47,42 @@ require_once("../models/Pantalla.php");
             echo json_encode($results);
 
         break;  
+
+        case 'listarmini':
+
+            $datos = $area->get_pantalla_mini($_POST["area_id"]);
+            $data = Array();
+            foreach ($datos as $row) {
+                
+                $sub_array = array();
+                $sub_array[] = $row["esc_nom"];
+                $sub_array[] = $row["codigo"];
+                $sub_array[] = $row["asignatura"];
+                $sub_array[] = $row["id"];
+                $sub_array[] = $row["horas"];
+                $sub_array[] = $row["turno"];
+                $sub_array[] = $row["origen"];
+                if ($row["docente"] == "") {
+                    
+                    $sub_array[] = '<span class="label label-pill label-success">Vacante</span>';
+
+                }else{
+
+                    $sub_array[] = '<span class="label label-pill label-danger">'.$row["docente"].'</span>'; 
+
+                }
+                $data[] = $sub_array;
+            }
+
+            $results = array(
+                "sEcho"=>1,
+                "iTotalRecords"=>count($data),
+                "iTotalDisplayRecords"=>count($data),
+                "aaData"=>$data);
+
+            echo json_encode($results);
+
+        break;
         
         case 'comboarea':
             $datos = $area->get_pantalla_area($_SESSION["area_id"]);
